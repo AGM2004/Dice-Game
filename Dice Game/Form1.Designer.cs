@@ -29,44 +29,44 @@ namespace Dice_Game
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.P1D1 = new System.Windows.Forms.PictureBox();
+            this.P1D2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.P2D1 = new System.Windows.Forms.PictureBox();
+            this.P2D2 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1D1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1D2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2D1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2D2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox6
+            // P1D1
             // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = global::Dice_Game.Properties.Resources.SIde_1;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(191, 170);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.P1D1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.P1D1.Image = global::Dice_Game.Properties.Resources.SIde_1;
+            this.P1D1.Location = new System.Drawing.Point(12, 12);
+            this.P1D1.Name = "P1D1";
+            this.P1D1.Size = new System.Drawing.Size(191, 170);
+            this.P1D1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.P1D1.TabIndex = 5;
+            this.P1D1.TabStop = false;
+            this.P1D1.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // pictureBox12
+            // P1D2
             // 
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox12.Image = global::Dice_Game.Properties.Resources.SIde_1;
-            this.pictureBox12.Location = new System.Drawing.Point(12, 218);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(191, 170);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.P1D2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.P1D2.Image = global::Dice_Game.Properties.Resources.SIde_1;
+            this.P1D2.Location = new System.Drawing.Point(12, 218);
+            this.P1D2.Name = "P1D2";
+            this.P1D2.Size = new System.Drawing.Size(191, 170);
+            this.P1D2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.P1D2.TabIndex = 11;
+            this.P1D2.TabStop = false;
+            this.P1D2.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // button1
             // 
@@ -114,29 +114,29 @@ namespace Dice_Game
             this.textBox1.TabIndex = 18;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // pictureBox1
+            // P2D1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Dice_Game.Properties.Resources.SIde_1;
-            this.pictureBox1.Location = new System.Drawing.Point(500, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.P2D1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.P2D1.Image = global::Dice_Game.Properties.Resources.SIde_1;
+            this.P2D1.Location = new System.Drawing.Point(500, 12);
+            this.P2D1.Name = "P2D1";
+            this.P2D1.Size = new System.Drawing.Size(191, 170);
+            this.P2D1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.P2D1.TabIndex = 19;
+            this.P2D1.TabStop = false;
+            this.P2D1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // P2D2
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::Dice_Game.Properties.Resources.SIde_1;
-            this.pictureBox2.Location = new System.Drawing.Point(500, 218);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(191, 170);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.P2D2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.P2D2.Image = global::Dice_Game.Properties.Resources.SIde_1;
+            this.P2D2.Location = new System.Drawing.Point(500, 218);
+            this.P2D2.Name = "P2D2";
+            this.P2D2.Size = new System.Drawing.Size(191, 170);
+            this.P2D2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.P2D2.TabIndex = 20;
+            this.P2D2.TabStop = false;
+            this.P2D2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBox2
             // 
@@ -153,35 +153,36 @@ namespace Dice_Game
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(715, 503);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.P2D2);
+            this.Controls.Add(this.P2D1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.P1D2);
+            this.Controls.Add(this.P1D1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Text = "Dice Game";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.P1D1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1D2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2D1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2D2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox P1D1;
+        private System.Windows.Forms.PictureBox P1D2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox P2D1;
+        private System.Windows.Forms.PictureBox P2D2;
         private System.Windows.Forms.TextBox textBox2;
     }
 }

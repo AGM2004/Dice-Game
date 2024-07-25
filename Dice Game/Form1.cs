@@ -12,238 +12,119 @@ namespace Dice_Game
 {
     public partial class Form1 : Form
     {
-        int i;       
+        int mouseclick = 0;
+        int[] playerscores = {0, 0};
+
         public Form1()
         {
             InitializeComponent();            
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            generator();
-        }
-
-        public void generator()
-        {
-            for (int turn = 0; turn <= 5; turn++)
+            mouseclick++;
+            if (mouseclick <= 5)
             {
-                Random generator = new Random();
-                int random = generator.Next(1, 7);
-                int random2 = generator.Next(1, 7);
-                int random3 = generator.Next(1, 7);
-                int random4 = generator.Next(1, 7);
-                for (i = 0; i < random; i++)
-                {
-                    changeimage(i);
-                }
-
-                for (i = 0; i < random2; i++)
-                {
-                    changeimage2(i);
-                }
-
-                for (i = 0; i < random3; i++)
-                {
-                    changeimage3(i);
-                }
-
-                for (i = 0; i < random4; i++)
-                {
-                    changeimage4(i);
-                }
-
-                int dice1 = random - 1;
-                int dice2 = random2 - 1;
-                int score = 0;                
-                int total = dice1 + dice2;
-                
-                 if (total % 2 == 0)
-                 {
-                    for (int z = 0; z < 100; z++)
-                    {
-                        int sum = score + 10;
-                        textBox1.Text = Convert.ToString(sum);
-                    }                   
-                    
-                }
-            
-
-                 else
-                 {
-                    for (int z = 0; z < 100; z++)
-                    {
-                        int sum = score - 5;
-                        textBox1.Text = Convert.ToString(sum);
-                    }
+                generator();
+            }
+            else {
+                this.Hide();
+                String winner = "";
+                if (playerscores[0] > playerscores[1]) { winner = "Player 1"; } else { winner = "Player 2"; }
+                DialogResult dialogResult = MessageBox.Show("The Winner is " + winner + " !!!!", "" ,MessageBoxButtons.OK);
+                if (dialogResult == DialogResult.OK) { 
+                    this.Close();
                 }
             }
         }
-             
+        public void generator()
+        {
+            Random generator = new Random();
+            int random;
+            PictureBox[] dices = { P1D1, P1D2, P2D1, P2D2 };
+            TextBox[] display = { textBox1, textBox2 };
+            int[] dicescores = new int[4];
+            for (int pass = 0; pass < 4; pass++) {
+                random = generator.Next(1,7);
+                dicescores[pass] = random;
+                changeimage(random, dices[pass]);
+            }
 
-        private void changeimage(int num)
+            int total = 0;
+            for (int player = 0; player < 2; player++) {
+                if (player == 0)
+                {
+                    total = dicescores[0] + dicescores[1];
+                    System.Console.WriteLine(total);
+                }
+                else { 
+                    total = dicescores[2] + dicescores[3];
+                    System.Console.WriteLine(total);
+                }
+
+                if (total % 2 == 0)
+                {
+                    playerscores[player] += 10;
+                    display[player].Text = Convert.ToString(playerscores[player]);
+                }
+                else
+                {
+                    playerscores[player] -= 5;
+                    display[player].Text = Convert.ToString(playerscores[player]);
+                }
+
+            }
+        }
+             
+        private void changeimage(int num, PictureBox dice)
         {
             switch(num) 
             {
                 case 1:
-                    pictureBox6.Image = Properties.Resources.SIde_1;
+                    dice.Image = Properties.Resources.SIde_1;
                     break;
 
                 case 2:
-                    pictureBox6.Image = Properties.Resources.Side_2;
+                    dice.Image = Properties.Resources.Side_2;
                     break;
 
                 case 3:
-                    pictureBox6.Image = Properties.Resources.Side_3;
+                    dice.Image = Properties.Resources.Side_3;
                     break;
                
                 case 4:
-                    pictureBox6.Image = Properties.Resources.Side_4;
+                    dice.Image = Properties.Resources.Side_4;
                     break;
                 
                 case 5:
-                    pictureBox6.Image = Properties.Resources.Side_5;
+                    dice.Image = Properties.Resources.Side_5;
                     break;
                 
                 case 6:
-                    pictureBox6.Image = Properties.Resources.Side_6;
+                    dice.Image = Properties.Resources.Side_6;
                     break;
             }
             
         }
-
-        private void changeimage3(int num)
-        {
-            switch (num)
-            {
-                case 1:
-                    pictureBox1.Image = Properties.Resources.SIde_1;
-                    break;
-
-                case 2:
-                    pictureBox1.Image = Properties.Resources.Side_2;
-                    break;
-
-                case 3:
-                    pictureBox1.Image = Properties.Resources.Side_3;
-                    break;
-
-                case 4:
-                    pictureBox1.Image = Properties.Resources.Side_4;
-                    break;
-
-                case 5:
-                    pictureBox1.Image = Properties.Resources.Side_5;
-                    break;
-
-                case 6:
-                    pictureBox1.Image = Properties.Resources.Side_6;
-                    break;
-            }
-
-        }
-
-        private void changeimage4(int num)
-        {
-            switch (num)
-            {
-                case 1:
-                    pictureBox2.Image = Properties.Resources.SIde_1;
-                    break;
-
-                case 2:
-                    pictureBox2.Image = Properties.Resources.Side_2;
-                    break;
-
-                case 3:
-                    pictureBox2.Image = Properties.Resources.Side_3;
-                    break;
-
-                case 4:
-                    pictureBox2.Image = Properties.Resources.Side_4;
-                    break;
-
-                case 5:
-                    pictureBox2.Image = Properties.Resources.Side_5;
-                    break;
-
-                case 6:
-                    pictureBox2.Image = Properties.Resources.Side_6;
-                    break;
-            }
-
-        }
-
-        private void changeimage2(int num)
-        {
-            switch (num)
-            {
-                case 1:
-                    pictureBox12.Image = Properties.Resources.SIde_1;
-                    break;
-
-                case 2:
-                    pictureBox12.Image = Properties.Resources.Side_2;
-                    break;
-
-                case 3:
-                    pictureBox12.Image = Properties.Resources.Side_3;
-                    break;
-
-                case 4:
-                    pictureBox12.Image = Properties.Resources.Side_4;
-                    break;
-
-                case 5:
-                    pictureBox12.Image = Properties.Resources.Side_5;
-                    break;
-
-                case 6:
-                    pictureBox12.Image = Properties.Resources.Side_6;
-                    break;
-            }
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 login = new Form2();
             login.Show();
         }
-       
+        private void pictureBox6_Click(object sender, EventArgs e)
+        { }
         private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            
-        }
-             
-
+        {}
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        {}
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        {}
         private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        {}
         private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        {}
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        {}
+        private void Form1_Load(object sender, EventArgs e)
+        {}
     }
 }
